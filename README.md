@@ -34,8 +34,6 @@ This project allows users to add, complete, and delete tasks while storing data 
 
 ![App Preview](AppPreview.png)
 
-> Add a screenshot of your project and name it **preview.png** inside the repository.
-
 ---
 
 ## 📂 Project Structure
