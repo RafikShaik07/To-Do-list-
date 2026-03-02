@@ -34,7 +34,7 @@ This project allows users to add, complete, and delete tasks while storing data 
 
 ## 📸 Preview
 
-![App Preview](ImagePreview.png)
+![App Preview] Image Preview.png
 
 > Add a screenshot of your project and name it **preview.png** inside the repository.
 
@@ -44,7 +44,11 @@ This project allows users to add, complete, and delete tasks while storing data 
 
 todo-list/
 │
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 └── preview.png
