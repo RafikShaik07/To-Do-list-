@@ -1,44 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const taskInput = document.getElementById('task-input');
-    const addBtn = document.getElementById('add-btn');
-    const taskList = document.getElementById('task-list');
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-    function addTask() {
-        const taskText = taskInput.value.trim();
-        if (taskText === '') {
-            alert('Please enter a task.');
-            return;
-        }
+function addTask(){
+    if(inputBox.value === ''){
+        alert("Please write a task");
+    }else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
 
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <span>${taskText}</span>
-            <button class="delete-btn">❌</button>
-        `;
-
-        taskList.appendChild(li);
-        taskInput.value = '';
-
-        li.addEventListener('click', toggleComplete);
-        li.querySelector('.delete-btn').addEventListener('click', deleteTask);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
     }
+    inputBox.value = "";
+    saveData();
+}
 
-    function toggleComplete(event) {
-        event.currentTarget.classList.toggle('completed');
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
     }
-
-    function deleteTask(event) {
-        event.stopPropagation(); 
-        const li = event.currentTarget.parentElement;
-        li.remove();
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
     }
+}, false);
 
-    addBtn.addEventListener('click', addTask);
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
 
-    taskInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            addTask();
-        }
-    });
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
 
-});
+showTask();
