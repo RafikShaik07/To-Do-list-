@@ -8,8 +8,6 @@ This project allows users to add, complete, and delete tasks while storing data 
 ## 🚀 Live Demo
 👉 https://rafikshaik07.github.io/To-Do-list-/
 
-*(Replace with your deployed project link — GitHub Pages / Netlify / Vercel)*
-
 ---
 
 ## 📌 Features
@@ -34,7 +32,7 @@ This project allows users to add, complete, and delete tasks while storing data 
 
 ## 📸 Preview
 
-![App Preview] Image Preview.png
+![App Preview](AppPreview.png)
 
 > Add a screenshot of your project and name it **preview.png** inside the repository.
 
