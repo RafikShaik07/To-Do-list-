@@ -6,7 +6,7 @@ This project allows users to add, complete, and delete tasks while storing data 
 ---
 
 ## 🚀 Live Demo
-👉 https://your-live-project-link.com
+👉 https://rafikshaik07.github.io/To-Do-list-/
 
 *(Replace with your deployed project link — GitHub Pages / Netlify / Vercel)*
 
@@ -34,15 +34,17 @@ This project allows users to add, complete, and delete tasks while storing data 
 
 ## 📸 Preview
 
-![App Preview](preview.png)
+![App Preview](ImagePreview.png)
 
 > Add a screenshot of your project and name it **preview.png** inside the repository.
 
 ---
 
-## ⚙️ How to Run Locally
+## 📂 Project Structure
 
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/todo-list.git
+todo-list/
+│
+├── index.html
+├── style.css
+├── script.js
+└── preview.png
